@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RHEMIAH FLOW | About</title>
+    <link rel="stylesheet" href="rhemiah.css">
+</head>
+<body>
+<div id="logo-modal" class="modal">
+    <span id="close-btn">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+          <a href="#" id="logo-link">
+            <img class="logo" src="IMAGES/RHEMIAH_FLOW_LOGO.png" alt="Rhemiah Flow Logo">
+            </a>
+             <script>
+                const logo = document.querySelector(".logo");
+                const modal = document.getElementById("logo-modal");
+                const modalImg = document.getElementById("modal-img");
+                const closeBtn = document.getElementById("close-btn");
+
+                logo.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                  }
+
+               closeBtn.onclick = function() {
+               modal.style.display = "none";
+               }
+               modal.onclick = function(e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+}
+              </script>
+            <!-- <h1>RHEMIAH FLOW</h1> -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="understand-flow.html">Understand Flow</a></li>
+                <li><a href="cycle-phases.html">Cycle Phases</a></li>
+                <li><a href="calculator.html">Flow Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Hero -->
+        <section class="hero">
+            <h2>About RHEMIAH FLOW</h2>
+            <p>Empowering women with knowledge about their menstrual cycles</p>
+        </section>
+
+        <!-- Our Mission -->
+        <section class="flow-section">
+            <h3>Our Mission</h3>
+            <p>
+                RHEMIAH FLOW was created to demystify the menstrual cycle and empower women
+                with accurate, gentle education. We believe that understanding your body is the
+                first step toward true wellbeing.
+            </p>
+            <p>
+                Our approach combines science, compassion, and practical wisdom to help you
+                navigate your cycle with confidence and care.
+            </p>
+        </section>
+
+        <!-- What We Offer -->
+        <section class="flow-section">
+            <h3>What We Offer</h3>
+            <div class="flow-types">
+                <div class="flow-type">
+                    <h4>📚 Education First</h4>
+                    <p>Learn about your cycle before tracking it. Understanding comes before action.</p>
+                </div>
+                <div class="flow-type">
+                    <h4>🧮 Gentle Calculation</h4>
+                    <p>Use our calculator to predict your phases and prepare for what's coming.</p>
+                </div>
+                <div class="flow-type">
+                    <h4>💝 Self-Care Focus</h4>
+                    <p>Discover how to honor your body's natural rhythms with rest and nourishment.</p>
+                </div>
+                <div class="flow-type">
+                    <h4>🤝 Supportive Community</h4>
+                    <p>Join a community that celebrates the beauty of cyclical living.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Philosophy -->
+        <section class="philosophy">
+            <h3>Our Philosophy</h3>
+            <p>
+                "You are not broken — you are cyclical. Your body knows exactly what it's doing.
+                RHEMIAH FLOW exists to help you listen to that wisdom."
+            </p>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="for-who">
+            <h3>Why Choose RHEMIAH FLOW?</h3>
+            <ul>
+                <li><span class="li-icon">🌸</span>Evidence-based information presented with compassion</li>
+                <li><span class="li-icon">🌸</span>No pressure to track or perform — just gentle guidance</li>
+                <li><span class="li-icon">🌸</span>Focus on wellbeing, not just data collection</li>
+                <li><span class="li-icon">🌸</span>Created by women, for women</li>
+                <li><span class="li-icon">🌸</span>Free access to all resources</li>
+            </ul>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="flow-transition">
+            <p>Ready to start your journey of self-discovery?</p>
+            <a href="understand-flow.html" class="btn">Learn About Your Flow</a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 RHEMIAH FLOW | All Rights Reserved</p>
+        <p>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Contact</a>
+        </p>
+    </footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll(".fade-in").forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\PC\Desktop\rhemiah-cycle\about.html
