@@ -787,10 +787,18 @@ button:hover {
 
 /* Preview cards grid */
 .preview-cards {
-  display: grid;
+  /* display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); */
+  display: flex;
+    gap: 1rem;
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .preview-cards {
+    flex-direction: column;
+  }
 }
 
 .preview-card {
