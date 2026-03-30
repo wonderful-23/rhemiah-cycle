@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RHEMIAH FLOW | Cycle Phases</title>
+  <link rel="stylesheet" href="rhemiah.css">
+</head>
+<body>
+<div id="logo-modal" class="modal">
+    <span id="close-btn">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav>
+      <a href="#" id="logo-link">
+      <img class="logo" src="IMAGES/RHEMIAH_FLOW_LOGO.png" alt="RHEMIAH FLOW Logo">
+      </a>
+       <script>
+                const logo = document.querySelector(".logo");
+                const modal = document.getElementById("logo-modal");
+                const modalImg = document.getElementById("modal-img");
+                const closeBtn = document.getElementById("close-btn");
+
+                logo.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                  }
+
+               closeBtn.onclick = function() {
+               modal.style.display = "none";
+               }
+               modal.onclick = function(e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+}
+              </script>
+      <!-- <h1>RHEMIAH FLOW</h1> -->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="understand-flow.html">Understand Your Flow</a></li>
+        <li><a href="cycle-phases.html">Cycle Phases</a></li>
+        <li><a href="calculator.html">Flow Calculator</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="cycle-phases">
+
+    <!-- Page Intro -->
+    <section class="page-intro">
+      <h2>Explore Your Cycle Phases</h2>
+      <p class="subtitle">Understanding each phase helps you notice patterns in energy, mood, and flow.</p>
+    </section>
+
+    <!-- Phase Cards -->
+    <section class="phase-cards">
+
+      <div class="card fade-in">
+        <h3>Menstrual Phase 🌙</h3>
+        <p>Time for rest and reflection. Your body sheds the uterine lining, and energy is often lower. Gentle self-care is key.</p>
+      </div>
+
+      <div class="card fade-in">
+        <h3>Follicular Phase 🌱</h3>
+        <p>Energy rises as follicles mature. Creativity and focus increase. Perfect time for learning, planning, and new projects.</p>
+      </div>
+
+      <div class="card fade-in">
+        <h3>Ovulation Phase 🌸</h3>
+        <p>Peak fertility and social energy. Confidence and focus are high. A great time for collaboration and communication.</p>
+      </div>
+
+      <div class="card fade-in">
+        <h3>Luteal Phase 🌺</h3>
+        <p>The body prepares for the next cycle. Energy may fluctuate, and self-care routines support comfort and balance.</p>
+      </div>
+
+    </section>
+
+    <!-- Transition to Calculator -->
+    <section class="cta-transition fade-in">
+      <p>Now that you understand the phases, let’s gently calculate your own cycle and flow.</p>
+      <a href="calculator.html" class="btn">Calculate My Flow</a>
+    </section>
+
+  </main>
+
+  <!-- Optional Footer -->
+  <footer>
+    <p>&copy; 2026 RHEMIAH FLOW | All Rights Reserved</p>
+    <p>
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Contact</a>
+    </p>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
